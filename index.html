@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Whister Search</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+<div class="hero-glow"></div>
+
+<nav>
+
+<div class="brand">
+
+    <img
+        src="logo.png"
+        alt="Whister"
+        class="logo"
+    >
+
+</div>
+
+<div class="nav-links">
+<a href="#">About</a>
+<a href="#">Privacy</a>
+<a href="#">Settings</a>
+</div>
+
+</nav>
+
+<main class="hero">
+
+<h1>
+Search without being watched.
+</h1>
+
+<p>
+Private search with optional AI-powered answers.
+</p>
+
+<form action="search.html">
+
+<div class="search-box">
+
+<input
+name="q"
+placeholder="Search the web privately..."
+required>
+
+<button>
+Search
+</button>
+
+</div>
+
+</form>
+
+<div class="ai-toggle-row">
+
+<span>Traditional</span>
+
+<label class="switch">
+<input checked type="checkbox" id="homeAiToggle">
+<span class="slider"></span>
+</label>
+
+<span>AI Search</span>
+
+</div>
+
+<div class="quick-links">
+
+<a href="#">Web</a>
+<a href="#">Images</a>
+<a href="#">News</a>
+<a href="#">Videos</a>
+<a href="#">Shopping</a>
+<a href="#">Maps</a>
+<a href="#">Academic</a>
+
+</div>
+
+<section class="feature-grid">
+
+<div class="card">
+🔒
+<h3>Private</h3>
+<p>No tracking or profiling.</p>
+</div>
+
+<div class="card">
+🤖
+<h3>AI Answers</h3>
+<p>Source-backed AI summaries.</p>
+</div>
+
+<div class="card">
+⚡
+<h3>Fast</h3>
+<p>Optimised search performance.</p>
+</div>
+
+<div class="card">
+🛡️
+<h3>Secure</h3>
+<p>Privacy-first search architecture.</p>
+</div>
+
+</section>
+
+<section class="trending">
+
+<h2>Trending Searches</h2>
+
+<div class="trends">
+
+<span>Artificial Intelligence</span>
+<span>Cyber Security</span>
+<span>SpaceX</span>
+<span>Privacy Tools</span>
+<span>Open Source AI</span>
+<span>Linux</span>
+
+</div>
+
+</section>
+
+<section class="tools">
+
+<h2>Quick Tools</h2>
+
+<div class="tool-grid">
+
+<div class="quick-tool" onclick="openWeather()">
+    🌦 Weather
+</div>
+
+<div class="quick-tool" onclick="openCalculator()">
+    🧮 Calculator
+</div>
+
+<div class="quick-tool" onclick="openCurrency()">
+    💱 Currency
+</div>
+
+<div class="quick-tool" onclick="openTimeZone()">
+    🕒 Time Zones
+</div>
+
+<div class="quick-tool" onclick="openDateCalc()">
+    📅 Date Calc
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+Whister • Search without being watched.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+/* ==========================
+   WHISTER SEARCH
+   styles.css
+========================== */
+
+:root{
+    --bg:#0b1220;
+    --bg-secondary:#10192e;
+
+    --card:rgba(255,255,255,.04);
+
+    --border:rgba(255,255,255,.08);
+
+    --accent:#4ca6ff;
+    --accent-hover:#66b5ff;
+
+    --text:#ffffff;
+    --muted:#98a7bc;
+
+    --success:#31d67b;
+
+    --radius:20px;
+    --blur:16px;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.25);
+
+    --transition:.25s ease;
+}
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+        Inter,
+        Segoe UI,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(76,166,255,.12),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(76,166,255,.08),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(0,200,255,.05),
+            transparent 20%
+        ),
+
+        linear-gradient(
+            180deg,
+            #0b1220,
+            #0f1728,
+            #0b1220
+        );
+
+    color:var(--text);
+    min-height:100vh;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+}
+
+button{
+    cursor:pointer;
+    font-family:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ==========================
+   BACKGROUND EFFECTS
+========================== */
+
+.background-grid{
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(255,255,255,.02) 1px,
+    transparent 1px),
+
+    linear-gradient(
+    90deg,
+    rgba(255,255,255,.02) 1px,
+    transparent 1px);
+
+    background-size:50px 50px;
+
+    opacity:.35;
+
+    pointer-events:none;
+
+    z-index:-2;
+}
+
+.hero-glow{
+    position:fixed;
+
+    width:700px;
+    height:700px;
+
+    background:#4ca6ff;
+
+    filter:blur(160px);
+
+    opacity:.08;
+
+    top:-150px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    pointer-events:none;
+
+    z-index:-1;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+nav{
+    width:100%;
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:24px;
+
+    display:flex;
+    justify-content:space-between;
+}

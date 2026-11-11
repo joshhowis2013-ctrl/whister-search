@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Whister Search</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<header>
+
+<div class="brand">
+
+    <img
+        src="logo.png"
+        alt="Whister"
+        class="logo"
+    >
+
+</div>
+
+
+<div class="search-header">
+
+<input
+id="searchInput"
+placeholder="Search">
+
+<button onclick="runSearch()">
+Search
+</button>
+
+</div>
+
+</header>
+
+<div class="search-layout">
+
+<main>
+
+<div class="tabs">
+
+    <button class="active"
+    onclick="switchTab('all')">
+        🌐 All
+    </button>
+
+    <button
+    onclick="switchTab('images')">
+        🖼 Images
+    </button>
+
+    <button
+    onclick="switchTab('news')">
+        📰 News
+    </button>
+
+    <button
+    onclick="switchTab('videos')">
+        🎥 Videos
+    </button>
+
+    <button
+    onclick="switchTab('shopping')">
+        🛒 Shopping
+    </button>
+
+    <button
+    onclick="location.href='history.html'">
+        🕓 History
+    </button>
+
+    <button
+    onclick="location.href='settings.html'">
+        ⚙ Settings
+    </button>
+
+</div>
+<section id="aiPanel" class="ai-card">
+
+<h2>
+✨ Whister AI Summary
+</h2>
+
+<p id="summary">
+Waiting for AI response...
+</p>
+
+</section>
+
+<section id="results"></section>
+
+</main>
+
+<aside>
+
+<div class="card">
+
+<h3>AI Mode</h3>
+
+<label class="switch">
+<input type="checkbox" checked id="aiToggle">
+<span class="slider"></span>
+</label>
+
+</div>
+
+<div class="card">
+
+<h3>Privacy Dashboard</h3>
+
+<p>History: Disabled</p>
+<p>Tracking: Blocked</p>
+<p>Data Shared: None</p>
+
+</div>
+
+<div class="card">
+
+<h3>Ask AI</h3>
+
+<input
+placeholder="Ask a follow-up..."
+class="followup">
+
+</div>
+
+<div class="card">
+
+<h3>Quick Tools</h3>
+
+<div class="quick-tool"
+onclick="openWeather()">
+
+🌦 Weather
+
+</div>
+
+<div class="quick-tool"
+onclick="openCalculator()">
+
+🧮 Calculator
+
+</div>
+
+<div class="quick-tool"
+onclick="openCurrency()">
+
+💱 Currency
+
+</div>
+
+<div class="quick-tool"
+onclick="openTimeZone()">
+
+🕒 Time Zones
+
+</div>
+
+<div class="quick-tool"
+onclick="location.href='settings.html'">
+
+⚙ Settings
+
+</div>
+
+</aside>
+
+</div>
+
+<script src="js/search.js"></script>
+
+</body>
+</html>

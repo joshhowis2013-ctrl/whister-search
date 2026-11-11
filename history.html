@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1">
+
+<title>
+Whister History
+</title>
+
+<link
+rel="stylesheet"
+href="styles.css">
+
+<style>
+
+.history-container{
+
+    max-width:1000px;
+
+    margin:40px auto;
+
+    padding:20px;
+}
+
+.history-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+}
+
+.history-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.history-item{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:18px;
+
+    transition:.2s;
+}
+
+.history-item:hover{
+
+    transform:translateY(-2px);
+
+    border-color:
+    rgba(76,166,255,.35);
+}
+
+.history-item a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:600;
+}
+
+.history-empty{
+
+    text-align:center;
+
+    color:var(--muted);
+
+    margin-top:80px;
+}
+
+.history-actions{
+
+    display:flex;
+
+    gap:10px;
+}
+
+.history-btn{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 18px;
+
+    background:#4ca6ff;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.history-btn:hover{
+
+    background:#63b1ff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="history-container">
+
+    <div class="history-header">
+
+        <h1>
+            🕓 Search History
+        </h1>
+
+        <div class="history-actions">
+
+            <button
+            class="history-btn"
+            onclick="clearHistory()">
+
+                Clear History
+
+            </button>
+
+            <button
+            class="history-btn"
+            onclick="location.href='settings.html'">
+
+                Settings
+
+            </button>
+
+            <button
+            class="history-btn"
+            onclick="location.href='index.html'">
+
+                Home
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div
+    class="history-list"
+    id="historyList">
+
+    </div>
+
+</div>
+
+<script>
+
+const historyList =
+document.getElementById(
+    "historyList"
+);
+
+function loadHistory(){
+
+    const history =
+    JSON.parse(
+
+        localStorage.getItem(
+            "recentSearches"
+        ) || "[]"
+
+    );
+
+    if(history.length === 0){
+
+        historyList.innerHTML = `
+
+            <div class="history-empty">
+
+                No search history yet.
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+    history.forEach(search=>{
+
+        historyList.innerHTML += `
+
+            <div class="history-item">
+
+                <a
+                href="search.html?q=${encodeURIComponent(search)}">
+
+                    🔍 ${search}
+
+                </a>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+function clearHistory(){
+
+    if(
+        !confirm(
+            "Clear all search history?"
+        )
+    ) return;
+
+    localStorage.removeItem(
+        "recentSearches"
+    );
+
+    location.reload();
+
+}
+
+loadHistory();
+
+</script>
+
+</body>
+
+</html>
