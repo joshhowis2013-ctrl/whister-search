@@ -14,7 +14,9 @@ Whister search is a free and open source search engine based on brave search
 
 https://search.whisterbrowser.com
 
+# Notes
 
-
+> [!NOTE]
+> Whisters searches local website may be behind the one in one on the website
 <img src="logo_chromium_color.png">
 
